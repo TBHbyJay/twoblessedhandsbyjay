@@ -120,7 +120,7 @@ const ExperienceSection = () => {
             className="relative w-full lg:w-[46vw] aspect-[4/3] rounded-2xl overflow-hidden shadow-card animate-float"
           >
             <img
-              src="/experience_interior.jpg"
+              src="experience_interior.jpg"
               alt="Salon Experience"
               className="w-full h-full object-cover"
             />
