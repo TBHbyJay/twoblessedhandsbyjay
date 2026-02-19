@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4.7%;
+    --foreground: 40 20% 96%;
+    --card: 0 0% 4.7%;
+    --card-foreground: 40 20% 96%;
+    --popover: 0 0% 4.7%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 40 40% 60%;
+    --primary-foreground: 0 0% 4.7%;
+    --secondary: 40 10% 15%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 40 10% 15%;
+    --muted-foreground: 40 10% 65%;
+    --accent: 40 40% 60%;
+    --accent-foreground: 0 0% 4.7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 10% 20%;
+    --input: 40 10% 20%;
+    --ring: 40 40% 60%;
+    --radius: 0.625rem;
+    
+    --gold: #C9A46B;
+    --gold-dark: #A88B55;
+    --black: #0B0B0C;
+    --ivory: #F3F1EA;
+    --white: #F6F5F2;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0B0B0C] text-[#F6F5F2] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  
+  .text-gold {
+    color: var(--gold);
+  }
+  
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  
+  .border-gold {
+    border-color: var(--gold);
+  }
+  
+  .gradient-left {
+    background: linear-gradient(90deg, rgba(11,11,12,0.85) 0%, rgba(11,11,12,0.45) 50%, rgba(11,11,12,0.0) 100%);
+  }
+  
+  .gradient-right {
+    background: linear-gradient(270deg, rgba(11,11,12,0.85) 0%, rgba(11,11,12,0.45) 50%, rgba(11,11,12,0.0) 100%);
+  }
+  
+  .gradient-dark {
+    background: rgba(11,11,12,0.72);
+  }
+  
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+  
+  .btn-primary {
+    @apply px-8 py-3 bg-[#C9A46B] text-[#0B0B0C] font-semibold rounded-full transition-all duration-300 hover:bg-[#A88B55] hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-3 border border-[#F6F5F2]/30 text-[#F6F5F2] font-medium rounded-full transition-all duration-300 hover:bg-[#F6F5F2]/10 hover:border-[#F6F5F2]/50;
+  }
+  
+  .micro-label {
+    @apply font-mono text-xs tracking-[0.12em] uppercase text-[#C9A46B];
+  }
+  
+  .hairline {
+    @apply h-px bg-[#F6F5F2]/20;
+  }
+  
+  .section-pinned {
+    @apply relative w-screen h-screen overflow-hidden;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A46B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A88B55;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(201, 164, 107, 0.3);
+  color: #F6F5F2;
+}
