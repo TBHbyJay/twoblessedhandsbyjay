@@ -52,7 +52,7 @@ export const salonConfig = {
   
   // Logo
   logo: {
-    main: '/logo-transparent.png',
+    main: ${import.meta.env.BASE_URL}logo-transparent.png`,
     alt: '/Logo TBH@4x.png',
   },
 };
