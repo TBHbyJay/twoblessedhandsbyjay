@@ -152,7 +152,7 @@ const HairSystemsSection = () => {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/hair_systems_blend.jpg"
+          src={`${import.meta.env.BASE_URL}hair_systems_blend.jpg`}
           alt="Hair Systems Services"
           className="w-full h-full object-cover"
         />

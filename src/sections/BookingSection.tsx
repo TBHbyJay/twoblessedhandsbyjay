@@ -71,7 +71,7 @@ const BookingSection = () => {
         className="absolute inset-0 w-full h-[120%] -top-[10%]"
       >
         <img
-          src="/closing_interior.jpg"
+          src={`${import.meta.env.BASE_URL}closing_interior.jpg`}
           alt="Book Your Visit"
           className="w-full h-full object-cover"
         />

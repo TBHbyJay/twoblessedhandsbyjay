@@ -132,7 +132,7 @@ const ColorSection = () => {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/color_process_closeup.jpg"
+          src={`${import.meta.env.BASE_URL}color_process_closeup.jpg`}
           alt="Hair Color Services"
           className="w-full h-full object-cover"
         />

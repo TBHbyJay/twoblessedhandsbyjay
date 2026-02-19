@@ -126,7 +126,7 @@ const StylingSection = () => {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/styling_finish_detail.jpg"
+          src={`${import.meta.env.BASE_URL}styling_finish_detail.jpg`}
           alt="Hair Styling Services"
           className="w-full h-full object-cover"
         />

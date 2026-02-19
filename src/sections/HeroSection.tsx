@@ -174,7 +174,7 @@ const HeroSection = () => {
         style={{ opacity: 0 }}
       >
         <img
-          src="/hero_salon_portrait.jpg"
+          src={`${import.meta.env.BASE_URL}hero_salon_portrait.jpg`}
           alt="Two Blessed Hands Salon"
           className="w-full h-full object-cover"
         />
